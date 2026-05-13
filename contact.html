@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | CHOW HOCK CHI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">CHOW<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container reveal">
+        <h1 class="section-title">Let's Build Something.</h1>
+        <p style="text-align: center; margin-bottom: 4rem; color: var(--text-muted);">Ready to upgrade your digital presence? Send me a message and let's discuss your project logic and design.</p>
+        
+        <div class="grid-2">
+            <div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Get in Touch</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Whether you have a question about my services or want to discuss a custom web application, I'm here to help.</p>
+                
+                <p style="margin-top: 1rem; color: var(--text-light);"><strong>Email:</strong><br><span style="color: var(--text-muted);">chowhockchi@hotmail.com</span></p>
+                <p style="margin-top: 1rem; color: var(--text-light);"><strong>Social:</strong><br>
+                    <a href="https://www.facebook.com/0marusuke0/about_details" target="_blank" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">↗ Connect with me on Facebook</a>
+                </p>
+            </div>
+            
+            <div style="background: var(--glass-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--glass-border);">
+                <!-- 把原来的 contact-form 换成带 id 的 -->
+                <form class="contact-form" id="myForm">
+                    <div class="form-group">
+                        <!-- 加上了 id="name" -->
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- 加上了 id="email" -->
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- 加上了 id="message" -->
+                        <textarea id="message" placeholder="Tell me about your project details..." required></textarea>
+                    </div>
+                    <!-- 把 button type 改成 submit，加上 id -->
+                    <button type="submit" class="btn" id="submitBtn" style="width: 100%; justify-content: center;">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chow Hock Chi. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
