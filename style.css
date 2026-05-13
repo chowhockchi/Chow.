@@ -316,3 +316,77 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* =========================================
+   📱 Mobile Responsiveness (手机端适配)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* 1. 导航栏乖乖叠起来 */
+    nav {
+        flex-direction: column;
+        padding: 1rem 5%;
+        gap: 1rem;
+    }
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 2. 调整整体间距，给变高的导航栏让位 */
+    .container {
+        padding: 10rem 5% 3rem 5%; 
+    }
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    /* 3. 首页 Hero 区域变成上下排列 */
+    .hero-wrapper {
+        flex-direction: column-reverse; /* 文字在下，照片在上 */
+        text-align: center;
+        gap: 2rem;
+        min-height: auto;
+        padding-top: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        margin: 0 auto 2rem auto;
+    }
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* 4. 你的照片缩小！别把屏幕撑爆了！ */
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* 5. 所有的网格全部变成单列 (一排只放一个) */
+    .grid-2, .grid-3, .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* 6. 联系表单和成功页面的间距缩减 */
+    .contact-form {
+        padding: 1rem 0;
+    }
+}
+
+/* 如果是特别小的手机屏幕 (比如 iPhone SE) */
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
